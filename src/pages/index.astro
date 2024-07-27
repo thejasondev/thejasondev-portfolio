@@ -2,22 +2,41 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Badge from '../components/Badge.astro';
+import Linkedin from '../icons/Linkedin.astro'
+import Github from '../icons/Github.astro'
+import Social from '../components/Social.astro'
+import Gmail from '../icons/Gmail.astro'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portfolio de Pietro - Programador Full-Stack"
+description="Mi objetivo es aprender y mejorar constantemente, participando en proyectos innovadores que me permitan ampliar mis conocimientos y aportar soluciones creativas y efectivas.">
 	<main>
 		<section class="w-full mx-auto lg:w-[740px] py-44">
 			<img class="rounded-full w-20 h-20 mb-4" 
 			src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHY5M3prNjdmdXV0YmVtMmlxNGNtc3pwNXplOGViMXl0cGFuc3JuNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fc4CgGnZOktRm/giphy.gif" alt="Pietro"
 			/> 
-		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-5 pb-10">
 			Hola, Soy Pietro 
-			<a href="https://www.linkedin.com/in/pietrobonacossa" target="_blank" rel="noopener"> <div class="flex justify-center items-center">
+			<a href="https://www.linkedin.com/in/pietrobonacossa" target="_blank" rel="noopener"> <div class="flex justify-center items-center hover:scale-110 transition">
 				<Badge> Open To Work </Badge>
 			</div><a/></h1>
-		<h2 class="text-xl opacity-80">
-			Programador Full-Stack. Tengo 20 años, soy de Tucumán, Argentina 🧉. Tengo una pasión insaciable por la tecnología y el desarrollo de software. Mi objetivo es aprender y mejorar constantemente, participando en proyectos innovadores que me permitan ampliar mis conocimientos y aportar soluciones creativas y efectivas.
+		<h2 class="text-2xl opacity-80 text-wrap">
+			<span class="text-blue-300">Programador Full-Stack.</span> <br>Tengo 20 años, soy de Tucumán, Argentina 🧉. Tengo una pasión insaciable por la tecnología y el desarrollo de software. Mi objetivo es aprender y mejorar constantemente, participando en proyectos innovadores que me permitan ampliar mis conocimientos y aportar soluciones creativas y efectivas.
 		</h2>
+		<nav class="flex gap-x-4 mt-6">
+			<Social href="https://www.linkedin.com/in/pietrobonacossa">
+				<Linkedin class="w-10 h-10"/>
+				LinkedIn
+			</Social>
+			<Social href="https://github.com/Pietro923">
+				<Github class="w-10 h-10"/>
+				GitHub
+			</Social>
+			<Social href="">
+				<Gmail class="w-10 h-10"/>
+				jpbonacossa@gmail.com
+			</Social>
+		</nav>
 		</section>
 	</main>
 </Layout>
