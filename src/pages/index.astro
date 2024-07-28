@@ -7,6 +7,7 @@ import Github from '../icons/Social/Github.astro'
 import Social from '../components/Social.astro'
 import Gmail from '../icons/Social/Gmail.astro'
 import Section from '../components/Section.astro';
+import Section_tecno from '../components/Section_tecno.astro';
 import Html from '../icons/Tecnologias/Lenguajes/Html.astro'
 import Css from '../icons/Tecnologias/Lenguajes/Css.astro'
 import Tecnos from '../components/Tecnos.astro'
@@ -25,6 +26,7 @@ import Figma from '../icons/Tecnologias/Herramientas_Adicionales/Figma.astro'
 import Git from '../icons/Tecnologias/Herramientas_Adicionales/Git.astro'
 import Netlify from '../icons/Tecnologias/Herramientas_Adicionales/Netlify.astro'
 import Vercel from '../icons/Tecnologias/Herramientas_Adicionales/Vercel.astro'
+
 
 ---
 
@@ -58,8 +60,12 @@ description="Mi objetivo es aprender y mejorar constantemente, participando en p
 			</Social>
 		</nav>
 		</Section>
-		<Section>
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-5 pb-10"> Tecnologías </h1>
+		<Section_tecno>
+			<div class="text-center">
+				<h1 class="text-white text-5xl font-bold pb-10"> Tecnologías </h1>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-96">
+				<div>
 			<h2 class="text-2xl opacity-80 text-wrap">
 				<span class="">Lenguajes.</span>
 			</h2>
@@ -103,7 +109,9 @@ description="Mi objetivo es aprender y mejorar constantemente, participando en p
 					<Tailwind class="w-10 h-10"/>
 				</Tecnos>
 			</nav>
-			<h2 class="text-2xl opacity-80 text-wrap mt-10">
+				</div>
+				<div>
+					<h2 class="text-2xl opacity-80 text-wrap">
 				<span class="">Bases de Datos.</span>
 			</h2>
 			<nav class="flex gap-x-5 mt-6">
@@ -131,6 +139,8 @@ description="Mi objetivo es aprender y mejorar constantemente, participando en p
 					<Vercel class="w-10 h-10"/>
 				</Tecnos>				
 			</nav>
-		</Section>
+				</div>
+			</div>
+		</Section_tecno>
 	</main>
 </Layout>
