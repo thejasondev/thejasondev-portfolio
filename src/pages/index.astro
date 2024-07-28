@@ -6,12 +6,16 @@ import Linkedin from '../icons/Linkedin.astro'
 import Github from '../icons/Github.astro'
 import Social from '../components/Social.astro'
 import Gmail from '../icons/Gmail.astro'
+import Section from '../components/Section.astro';
+import Html from '../icons/Html.astro'
+import Css from '../icons/Css.astro'
+import Tecnos from '../components/Tecnos.astro'
 ---
 
 <Layout title="Portfolio de Pietro - Programador Full-Stack"
 description="Mi objetivo es aprender y mejorar constantemente, participando en proyectos innovadores que me permitan ampliar mis conocimientos y aportar soluciones creativas y efectivas.">
 	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44">
+		<Section>
 			<img class="rounded-full w-20 h-20 mb-4" 
 			src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHY5M3prNjdmdXV0YmVtMmlxNGNtc3pwNXplOGViMXl0cGFuc3JuNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fc4CgGnZOktRm/giphy.gif" alt="Pietro"
 			/> 
@@ -37,6 +41,17 @@ description="Mi objetivo es aprender y mejorar constantemente, participando en p
 				jpbonacossa@gmail.com
 			</Social>
 		</nav>
-		</section>
+		</Section>
+		<Section>
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-5 pb-10"> Tecnologías </h1>
+			<nav class="flex gap-x-5 mt-6">
+				<Tecnos>
+					<Html class="w-10 h-10"/>
+				</Tecnos>
+				<Tecnos>
+					<Css class="w-10 h-10"/>
+				</Tecnos>
+			</nav>
+		</Section>
 	</main>
 </Layout>
