@@ -1,12 +1,32 @@
 ---
+import Html from "../icons/Tecnologias/Lenguajes/Html.astro"
+import Css from "../icons/Tecnologias/Lenguajes/Css.astro"
+import Js from "../icons/Tecnologias/Lenguajes/Js.astro"
+const tags = {
+    Html: {
+        name:"Html",
+        class: "bg-[#963419] text-white",
+        icon: Html,
+    },
+    Css: {
+        name:"Css",
+        class: "bg-[#07436b] text-white",
+        icon: Css,
+    },
+    Js: {
+        name:"Js",
+        class: "bg-[#a39535] text-white",
+        icon: Js,
+    }
+}
 const projects = [
     {
-        title: 'project 1',
-        description: 'loren',
-        link: '#',
-        github: '#',
-        image: '',
-        tags: ['HTML','CSS','Js']
+        title: "Reddit - Blog",
+        description: "Blog para todos los usuarios",
+        link: "https://www.reddit.com/",
+        github: 'https://github.com/Pietro923',
+        image: "/projects/proyecto 1.webp",
+        tags: [tags.Html, tags.Css, tags.Js]
     }
 ]
 ---
@@ -14,14 +34,20 @@ const projects = [
 {
     projects.map(({image, title,description,tags})=>(
     <article>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <ul>
+        <h3 class="text-2xl font-semibold mb-2 ">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-4 flex-row mb-2">
             {tags.map((tag)=>(
-                <li>{tag}</li>
+                <li>
+                    <span class={`flex gap-x-2 rounded-full text-xm ${tag.class} py-1 px-2`}>
+                    <tag.icon class="size-6"/>
+                    {tag.name}
+                </span>
+                </li>
             ))}
         </ul>
-        <img src={image} alt={`Captura de pantalla del proyecto ${image}`}/>
+        <img class="rounded shadow-2xl shadow-white/15"
+        src={image} alt={`Captura de pantalla del proyecto ${image}`}/>
     </article>
     ))
 }
