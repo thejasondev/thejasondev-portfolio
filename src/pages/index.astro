@@ -14,6 +14,7 @@ import Certificados from '../components/Certificados.astro'
 import Sobre_mi from '../components/Sobre_mi.astro'
 import Cert_icon from '../icons/Titulos/Cert_icon.astro'
 import Me_icons from '../icons/Titulos/Me_icon.astro'
+import Section_sobremi from '../components/Section_sobremi.astro'
 ---
 
 <Layout title="Portfolio de Pietro - Programador Full-Stack"
@@ -55,17 +56,17 @@ description="Mi objetivo es aprender y mejorar constantemente, participando en p
 			</div>
 			<Proyectos/>
 		</Section>
-		<Section id="cert">
+		<Section_tecno id="cert">
 			<div class="flex justify-center">
 				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"> <Cert_icon class="size-8 "/>Certificados </h2>
 			</div>
 			<Certificados/>
-		</Section>
-		<Section id="sobremi">
+		</Section_tecno>
+		<Section_sobremi id="sobremi">
 			<div class="flex justify-center">
 				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"> <Me_icons class="size-8 "/>Sobre mí </h2>
 			</div>
 			<Sobre_mi/>
-		</Section>
+		</Section_sobremi>
 	</main>
 </Layout>
