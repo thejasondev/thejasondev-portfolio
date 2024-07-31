@@ -15,6 +15,8 @@ import Sobre_mi from '../components/Sobre_mi.astro'
 import Cert_icon from '../icons/Titulos/Cert_icon.astro'
 import Me_icons from '../icons/Titulos/Me_icon.astro'
 import Section_sobremi from '../components/Section_sobremi.astro'
+import Footer from '../components/Footer.astro'
+import Discord from '../icons/Social/Discord.astro'
 ---
 
 <Layout title="Portfolio de Pietro - Programador Full-Stack"
@@ -45,6 +47,10 @@ description="Mi objetivo es aprender y mejorar constantemente, participando en p
 				<Gmail class="size-4 md:size-6"/>
 				jpbonacossa@gmail.com
 			</Social_icons>
+			<Social_icons href="https://discord.com/users/222491467275436033">
+				<Discord class="size-4 md:size-6"/>
+				Bonacxito
+			</Social_icons>
 		</nav>
 		</Section>
 		<Section_tecno id="tecnologias">
@@ -68,5 +74,6 @@ description="Mi objetivo es aprender y mejorar constantemente, participando en p
 			</div>
 			<Sobre_mi/>
 		</Section_sobremi>
+		<Footer/>
 	</main>
 </Layout>
