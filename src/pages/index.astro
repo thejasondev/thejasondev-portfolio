@@ -17,6 +17,7 @@ import Me_icons from '../icons/Titulos/Me_icon.astro'
 import Section_sobremi from '../components/Section_sobremi.astro'
 import Footer from '../components/Footer.astro'
 import Discord from '../icons/Social/Discord.astro'
+import Section_certificados from '../components/Section_certificados.astro';
 ---
 
 <Layout title="Portfolio de Pietro - Programador Full-Stack"
@@ -62,13 +63,13 @@ description="Mi objetivo es aprender y mejorar constantemente, participando en p
 			</div>
 			<Proyectos/>
 		</Section>
-		<Section_tecno id="cert">
+		<Section_certificados id="certificados">
 			<div class="flex justify-center">
 				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"> <Cert_icon class="size-8 "/>Certificados </h2>
 			</div>
 			<Certificados/>
-		</Section_tecno>
-		<Section_sobremi id="sobremi">
+		</Section_certificados>
+		<Section_sobremi id="sobre_mi">
 			<div class="flex justify-center">
 				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"> <Me_icons class="size-8 "/>Sobre mí </h2>
 			</div>
