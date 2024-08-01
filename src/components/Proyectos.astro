@@ -2,6 +2,9 @@
 import Html from "../icons/Tecnologias/Lenguajes/Html.astro"
 import Css from "../icons/Tecnologias/Lenguajes/Css.astro"
 import Js from "../icons/Tecnologias/Lenguajes/Js.astro"
+import Social_icons from "./Social_icons.astro"
+import Github from "../icons/Social/Github.astro"
+import Link from '../icons/Social/Link.astro'
 const tags = {
     Html: {
         name:"Html",
@@ -39,15 +42,29 @@ const projects = [
         <ul class="flex gap-x-4 flex-row mb-2">
             {tags.map((tag)=>(
                 <li>
-                    <span class={`flex gap-x-2 rounded-full text-xm ${tag.class} py-1 px-2 border`}>
+                    <span class={`flex gap-x-2 rounded-full text-xm ${tag.class} py-1 px-2`}>
                     <tag.icon class="size-6"/>
                     {tag.name}
                 </span>
                 </li>
             ))}
         </ul>
-        <img class="rounded shadow-2xl shadow-white/15"
+        <img loading="lazy" class="rounded shadow-2xl shadow-white/15 aspect-video"
         src={image} alt={`Captura de pantalla del proyecto ${image}`}/>
+
+
+        <footer class="flex gap-x-5 mt-6 flex-wrap">
+            <Social_icons href="https://github.com/Pietro923/Programacion">
+				<Github class="size-4 md:size-6"/>
+				Code
+			</Social_icons>
+            <Social_icons href="#">
+				<Link class="size-4 md:size-6"/>
+				Preview
+			</Social_icons>
+        </footer>
+
+        
     </article>
     ))
 }
