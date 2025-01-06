@@ -8,49 +8,57 @@ import Gmail from '../icons/Social/Gmail.astro'
 import Section from '../components/Section.astro';
 import Section_tecno from '../components/Section_tecno.astro';
 import Tecnologias from '../components/Tecnologias.astro';
-import Code from '../icons/Titulos/Code.astro'
 import Proyectos from '../components/Proyectos.astro'
-import Certificados from '../components/Certificados.astro'
-import Sobre_mi from '../components/Sobre_mi.astro'
-import Cert_icon from '../icons/Titulos/Cert_icon.astro'
-import Me_icons from '../icons/Titulos/Me_icon.astro'
-import Section_sobremi from '../components/Section_sobremi.astro'
+import Section_contact from '../components/Section_contact.astro'
 import Footer from '../components/Footer.astro'
-import Discord from '../icons/Social/Discord.astro'
-import Section_certificados from '../components/Section_certificados.astro';
+import Section_services from '../components/Section_services.astro';
+import Contact from '../components/Contact.astro';
+import Services from '../components/Services.astro';
 ---
 
-<Layout title="Portfolio de Pietro - Programador Full-Stack"
+<Layout title="Portfolio de Jason - Programador Front-End"
 description="Mi objetivo es aprender y mejorar constantemente, participando en proyectos innovadores que me permitan ampliar mis conocimientos y aportar soluciones creativas y efectivas.">
 	<main class="px-4">
 		<Section>
-			<img class="rounded-full w-20 h-20 mb-4" 
-			src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHY5M3prNjdmdXV0YmVtMmlxNGNtc3pwNXplOGViMXl0cGFuc3JuNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fc4CgGnZOktRm/giphy.gif" alt="Pietro"
+			<img class="rounded-full w-20 h-20 mb-4 lg:w-32 lg:h-32 lg:mb-6"	 
+			src="/foto-perfil/foto_perfil.JPG" alt="Jason Guerra"
 			/> 
-		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-5 pb-6 lg:pb-10">
-			Hola, Soy Pietro 
-			<a href="https://www.linkedin.com/in/pietrobonacossa" target="_blank" rel="noopener"> <div class="flex justify-center items-center hover:scale-110 transition">
+			<h1 class="flex flex-row gap-x-5 text-3xl md:text-4xl lg:text-3xl font-bold mb-6">¡Hola! Soy Jason.
+			<a href="https://wa.me/+5353118193?text=Estoy%20solicitando%20sus%20servicios" target="_blank" rel="noopener"> <div class="flex justify-center items-center hover:scale-110 transition">
 				<Badge> Open To Work </Badge>
 			</div><a/></h1>
 		<h2 class="text-xl lg:text-2xl opacity-80 text-pretty max-w-{700px}">
-			<span class="text-blue-300">Programador Full-Stack.</span> <br>Tengo 20 años, soy de Tucumán, Argentina 🧉. Me especializo en tecnología y desarrollo de software, siempre buscando aprender y mejorar. Mi objetivo es participar en proyectos innovadores que amplíen mis conocimientos y permitan aportar soluciones creativas y efectivas.
+			<div class="max-w-4xl mx-auto">
+    <p class="text-lg leading-relaxed mb-8">
+      Un apasionado desarrollador frontend con 27 años, residente en Miramar, La Habana, Cuba. Mi formación como ingeniero industrial me ha proporcionado una sólida base en la resolución de problemas y la optimización de procesos, habilidades que aplico en el desarrollo web.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+      <div class="bg-black p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-4">¿Qué ofrezco?</h2>
+        <p class="text-gray-300">Experiencias digitales modernas y funcionales, utilizando tecnologías como React, Tailwind CSS, y Astro, para crear soluciones a medida que superen tus expectativas.</p>
+      </div>
+      <div class="bg-black p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-4">¿Por qué elegirme?</h2>
+        <p class="text-gray-300">Estoy comprometido con la calidad, la atención al detalle y el cumplimiento de plazos. Cada proyecto es una oportunidad para demostrar mi profesionalismo y dedicación.</p>
+      </div>
+    </div>
+    <p class="text-lg leading-relaxed mt-8">
+      Si buscas transformar tus ideas en una realidad online de alto impacto, estaré encantado de colaborar contigo. <span class="font-semibold">¡Hablemos sobre cómo puedo ayudarte a alcanzar tus objetivos!</span>
+    </p>
+	</div>
 		</h2>
 		<nav class="flex gap-x-5 mt-6 flex-wrap">
-			<Social_icons href="https://www.linkedin.com/in/pietrobonacossa">
+			<Social_icons href="https://www.linkedin.com/in/thejasondev?">
 				<Linkedin class="size-4 md:size-6"/>
 				LinkedIn
 			</Social_icons>
-			<Social_icons href="https://github.com/Pietro923">
+			<Social_icons href="https://github.com/thejasondev?">
 				<Github class="size-4 md:size-6"/>
 				GitHub
 			</Social_icons>
-			<Social_icons href="mailto:jpbonacossa@gmail.com">
+			<Social_icons href="mailto:thejasondev13@gmail.com?">
 				<Gmail class="size-4 md:size-6"/>
-				jpbonacossa@gmail.com
-			</Social_icons>
-			<Social_icons href="https://discord.com/users/222491467275436033">
-				<Discord class="size-4 md:size-6"/>
-				Bonacxito
+				thejasondev13@gmail.com
 			</Social_icons>
 		</nav>
 		</Section>
@@ -59,22 +67,21 @@ description="Mi objetivo es aprender y mejorar constantemente, participando en p
 		</Section_tecno>
 		<Section id="proyectos">
 			<div class="flex justify-center">
-				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"> <Code class="size-8 "/>Proyectos </h2>
+				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4">Proyectos</h2>
 			</div>
 			<Proyectos/>
 		</Section>
-		<Section_certificados id="certificados">
+		<Section_services id="servicios">
 			<div class="flex justify-center">
-				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"> <Cert_icon class="size-8 "/>Certificados </h2>
+				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4">Mis Servicios</h2>
 			</div>
-			<Certificados/>
-		</Section_certificados>
-		<Section_sobremi id="sobre_mi">
-			<div class="flex justify-center">
-				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"> <Me_icons class="size-8 "/>Sobre mí </h2>
-			</div>
-			<Sobre_mi/>
-		</Section_sobremi>
+			<Services/>
+		</Section_services>
+		<Section_contact id="contacto">
+			<div class="flex flex-col justify-center ">
+				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center justify-center mb-4">Contacto</h2>
+			<Contact/>
+		</Section_contact>
 		<Footer/>
 	</main>
 	
