@@ -1,88 +1,101 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
-import Linkedin from '../icons/Social/Linkedin.astro'
-import Github from '../icons/Social/Github.astro'
-import Social_icons from '../components/Social_icons.astro'
-import Gmail from '../icons/Social/Gmail.astro'
+import Linkedin from '../icons/Social/Linkedin.astro';
+import Github from '../icons/Social/Github.astro';
+import Social_icons from '../components/Social_icons.astro';
+import Gmail from '../icons/Social/Gmail.astro';
 import Section from '../components/Section.astro';
 import Section_tecno from '../components/Section_tecno.astro';
 import Tecnologias from '../components/Tecnologias.astro';
-import Proyectos from '../components/Proyectos.astro'
-import Section_contact from '../components/Section_contact.astro'
-import Footer from '../components/Footer.astro'
+import Proyectos from '../components/Proyectos.astro';
+import Section_contact from '../components/Section_contact.astro';
+import Footer from '../components/Footer.astro';
 import Section_services from '../components/Section_services.astro';
 import Contact from '../components/Contact.astro';
 import Services from '../components/Services.astro';
+import { personalInfo } from '../data/personalInfo.js';
 ---
 
-<Layout title="Portfolio de Jason - Programador Front-End"
-description="Mi objetivo es aprender y mejorar constantemente, participando en proyectos innovadores que me permitan ampliar mis conocimientos y aportar soluciones creativas y efectivas.">
-	<main class="px-4">
-		<Section>
-			<img class="rounded-full w-20 h-20 mb-4 lg:w-32 lg:h-32 lg:mb-6"	 
-			src="/foto-perfil/foto_perfil.JPG" alt="Jason Guerra"
-			/> 
-			<h1 class="flex flex-row gap-x-5 text-3xl md:text-4xl lg:text-3xl font-bold mb-6">¡Hola! Soy Jason.
-			<a href="https://wa.me/+5353118193?text=Estoy%20solicitando%20sus%20servicios" target="_blank" rel="noopener"> <div class="flex justify-center items-center hover:scale-110 transition">
-				<Badge> Open To Work </Badge>
-			</div><a/></h1>
-		<h2 class="text-xl lg:text-2xl opacity-80 text-pretty max-w-{700px}">
-			<div class="max-w-4xl mx-auto">
-    <p class="text-lg leading-relaxed mb-8">
-      Un apasionado desarrollador frontend con 27 años, residente en Miramar, La Habana, Cuba. Mi formación como ingeniero industrial me ha proporcionado una sólida base en la resolución de problemas y la optimización de procesos, habilidades que aplico en el desarrollo web.
-    </p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
-      <div class="bg-black p-6 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-semibold mb-4">¿Qué ofrezco?</h2>
-        <p class="text-gray-300">Experiencias digitales modernas y funcionales, utilizando tecnologías como React, Tailwind CSS, y Astro, para crear soluciones a medida que superen tus expectativas.</p>
+<Layout
+  title="Portfolio de Jason - Programador Front-End"
+  description="Mi objetivo es aprender y mejorar constantemente, participando en proyectos innovadores que me permitan ampliar mis conocimientos y aportar soluciones creativas y efectivas."
+>
+  <main class="px-4">
+    <Section>
+      <img
+        class="rounded-full w-20 h-20 mb-4 lg:w-32 lg:h-32 lg:mb-6"
+        src="/foto-perfil/foto_perfil.JPG"
+        alt={personalInfo.name}
+      />
+      <h1 class="flex flex-row gap-x-5 text-3xl md:text-4xl lg:text-3xl font-bold mb-6">
+        ¡Hola! Soy {personalInfo.name}.
+        <a
+          href="https://wa.me/+5353118193?text=Estoy%20solicitando%20sus%20servicios"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="flex justify-center items-center hover:scale-110 transition">
+            <Badge> Open To Work </Badge>
+          </div>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl opacity-80 text-pretty max-w-{700px}">
+        <div class="max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-8">
+            {personalInfo.description}
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+            <div class="bg-black p-6 rounded-lg shadow-lg">
+              <h2 class="text-2xl font-semibold mb-4">¿Qué ofrezco?</h2>
+              <p class="text-gray-300">{personalInfo.offer}</p>
+            </div>
+            <div class="bg-black p-6 rounded-lg shadow-lg">
+              <h2 class="text-2xl font-semibold mb-4">¿Por qué elegirme?</h2>
+              <p class="text-gray-300">{personalInfo.whyChooseMe}</p>
+            </div>
+          </div>
+          <p class="text-lg leading-relaxed mt-8">
+            Si buscas transformar tus ideas en una realidad online de alto impacto, estaré encantado de colaborar contigo. <span class="font-semibold">¡Hablemos sobre cómo puedo ayudarte a alcanzar tus objetivos!</span>
+          </p>
+        </div>
+      </h2>
+      <nav class="flex gap-x-5 mt-6 flex-wrap">
+  <Social_icons href={personalInfo.contact.linkedin} aria-label="Jason's LinkedIn profile">
+    <Linkedin class="size-4 md:size-6" />
+    LinkedIn
+  </Social_icons>
+  <Social_icons href={personalInfo.contact.github} aria-label="Jason's GitHub profile">
+    <Github class="size-4 md:size-6" />
+    GitHub
+  </Social_icons>
+  <Social_icons href={personalInfo.contact.email} aria-label="Send an email to Jason">
+    <Gmail class="size-4 md:size-6" />
+    thejasondev13@gmail.com
+  </Social_icons>
+</nav>
+    </Section>
+    <Section_tecno id="tecnologias">
+      <Tecnologias />
+    </Section_tecno>
+    <Section id="proyectos">
+      <div class="flex justify-center">
+        <h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4">Proyectos</h2>
       </div>
-      <div class="bg-black p-6 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-semibold mb-4">¿Por qué elegirme?</h2>
-        <p class="text-gray-300">Estoy comprometido con la calidad, la atención al detalle y el cumplimiento de plazos. Cada proyecto es una oportunidad para demostrar mi profesionalismo y dedicación.</p>
+      <Proyectos />
+    </Section>
+    <Section_services id="servicios">
+      <div class="flex justify-center">
+        <h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4">Mis Servicios</h2>
       </div>
-    </div>
-    <p class="text-lg leading-relaxed mt-8">
-      Si buscas transformar tus ideas en una realidad online de alto impacto, estaré encantado de colaborar contigo. <span class="font-semibold">¡Hablemos sobre cómo puedo ayudarte a alcanzar tus objetivos!</span>
-    </p>
-	</div>
-		</h2>
-		<nav class="flex gap-x-5 mt-6 flex-wrap">
-			<Social_icons href="https://www.linkedin.com/in/thejasondev?">
-				<Linkedin class="size-4 md:size-6"/>
-				LinkedIn
-			</Social_icons>
-			<Social_icons href="https://github.com/thejasondev?">
-				<Github class="size-4 md:size-6"/>
-				GitHub
-			</Social_icons>
-			<Social_icons href="mailto:thejasondev13@gmail.com?">
-				<Gmail class="size-4 md:size-6"/>
-				thejasondev13@gmail.com
-			</Social_icons>
-		</nav>
-		</Section>
-		<Section_tecno id="tecnologias">
-			<Tecnologias/>
-		</Section_tecno>
-		<Section id="proyectos">
-			<div class="flex justify-center">
-				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4">Proyectos</h2>
-			</div>
-			<Proyectos/>
-		</Section>
-		<Section_services id="servicios">
-			<div class="flex justify-center">
-				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4">Mis Servicios</h2>
-			</div>
-			<Services/>
-		</Section_services>
-		<Section_contact id="contacto">
-			<div class="flex flex-col justify-center ">
-				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center justify-center mb-4">Contacto</h2>
-			<Contact/>
-		</Section_contact>
-		<Footer/>
-	</main>
-	
+      <Services />
+    </Section_services>
+    <Section_contact id="contacto">
+      <div class="flex flex-col justify-center ">
+        <h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center justify-center mb-4">Contacto</h2>
+        <Contact />
+      </div>
+    </Section_contact>
+    <Footer />
+  </main>
 </Layout>

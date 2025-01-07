@@ -1,64 +1,14 @@
 ---
-import Html from "../icons/Tecnologias/Lenguajes/Html.astro";
-import Css from "../icons/Tecnologias/Lenguajes/Css.astro";
-import Tailwind from "../icons/Tecnologias/Frameworks_Librerias/Tailwind.astro";
-import Js from "../icons/Tecnologias/Lenguajes/Js.astro";
-import React from "../icons/Tecnologias/Frameworks_Librerias/React.astro";
+import { TAGS, PROJECTS } from "../data/projects.js";
 import Social_icons from "./Social_icons.astro";
 import Vercel from "../icons/Tecnologias/Herramientas_Adicionales/Vercel.astro";
-
-
-const TAGS = {
-  Html: {
-    name: "Html",
-    class: "bg-[#963419] text-white",
-    icon: Html,
-  },
-  Css: {
-    name: "Css",
-    class: "bg-[#07436b] text-white",
-    icon: Css,
-  },
-  Tailwind: {
-    name: "Tailwind",
-    class: "bg-[#1c7777] text-white",
-    icon: Tailwind,
-  },
-  Js: {
-    name: "Js",
-    class: "bg-[#a39535] text-white",
-    icon: Js,
-  },
-  React: {
-    name: "React",
-    class: "bg-[#1c7777] text-white",
-    icon: React,
-  },
-};
-
-const PROJECTS = [
-  {
-    title: "The Jason Store - Tienda online",
-    description: "The Jason Store ofrece productos de calidad: tecnología, ropa, y más. Compra fácil y rápido online.",
-    vercel: "https://the-jason-store.vercel.app/",
-    image: "/public/projects/proyecto1.webp",
-    tags: [TAGS.Html, TAGS.Css, TAGS.Tailwind, TAGS.Js, TAGS.React],
-  },
-  {
-    title: "Aplicacion del Clima",
-    description: "Pagina creada con el objetivo de usar API del clima y probar su funcionamiento. Se utilizo Html, Css y JS",
-    vercel: "",
-    image: "/projects/proyecto2.webp",
-    tags: [TAGS.Html, TAGS.Css, TAGS.Js],
-  },
-];
 ---
 
 <div class="flex flex-col gap-y-16">
   {PROJECTS.map(({ image, title, description, tags, vercel }) => (
     <article class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
       <div class="w-full md:w-1/2 flex items-center group">
-        <div class="relative flex flex-col items-center transition duration-500 ease-in-out transform shadow-xl overflow-hidden rounded-xl sm:rounded-xl lg:border lg:border-gray-800 group-hover:shadow-2xl">
+        <div class="relative flex flex-col items-center transition duration-500 ease-in-out transform shadow-xl overflow-hidden rounded-xl sm:rounded-xl lg:border lg:border-gray-800 group-hover:shadow[...]">
           <img alt="Captura del Proyecto" class="object-cover object-top w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
         </div>
       </div>
