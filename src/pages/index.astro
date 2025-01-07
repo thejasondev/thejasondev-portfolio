@@ -8,13 +8,13 @@ import Gmail from '../icons/Social/Gmail.astro';
 import Section from '../components/sections/Section.astro';
 import Section_tecno from '../components/sections/Section_tecno.astro';
 import Tecnologias from '../components/technologies/Tecnologias.astro';
-import Proyectos from '../components/projects/Proyectos.astro';
 import Section_contact from '../components/sections/Section_contact.astro';
 import Footer from '../components/common/Footer.astro';
 import Section_services from '../components/sections/Section_services.astro';
-import Contact from '../components/forms/Contact.astro';
-import Services from '../components/services/Services.astro';
 import { personalInfo } from '../data/personalInfo.js';
+import Proyectos from './Proyectos.astro';
+import Contact from './Contact.astro';
+import Services from './Services.astro';
 ---
 
 <Layout
@@ -22,7 +22,7 @@ import { personalInfo } from '../data/personalInfo.js';
   description="Mi objetivo es aprender y mejorar constantemente, participando en proyectos innovadores que me permitan ampliar mis conocimientos y aportar soluciones creativas y efectivas."
 >
   <main class="px-4">
-    <Section>
+    <Section id="top">
       <img
         class="rounded-full w-20 h-20 mb-4 lg:w-32 lg:h-32 lg:mb-6"
         src="/foto-perfil/foto_perfil.JPG"
@@ -61,40 +61,34 @@ import { personalInfo } from '../data/personalInfo.js';
         </div>
       </h2>
       <nav class="flex gap-x-5 mt-6 flex-wrap">
-  <Social_icons href={personalInfo.contact.linkedin} aria-label="Jason's LinkedIn profile">
-    <Linkedin class="size-4 md:size-6" />
-    LinkedIn
-  </Social_icons>
-  <Social_icons href={personalInfo.contact.github} aria-label="Jason's GitHub profile">
-    <Github class="size-4 md:size-6" />
-    GitHub
-  </Social_icons>
-  <Social_icons href={personalInfo.contact.email} aria-label="Send an email to Jason">
-    <Gmail class="size-4 md:size-6" />
-    thejasondev13@gmail.com
-  </Social_icons>
-</nav>
+        <Social_icons href={personalInfo.contact.linkedin} aria-label="Jason's LinkedIn profile">
+          <Linkedin class="size-4 md:size-6" />
+          LinkedIn
+        </Social_icons>
+        <Social_icons href={personalInfo.contact.github} aria-label="Jason's GitHub profile">
+          <Github class="size-4 md:size-6" />
+          GitHub
+        </Social_icons>
+        <Social_icons href={personalInfo.contact.email} aria-label="Send an email to Jason">
+          <Gmail class="size-4 md:size-6" />
+          thejasondev13@gmail.com
+        </Social_icons>
+      </nav>
     </Section>
     <Section_tecno id="tecnologias">
       <Tecnologias />
     </Section_tecno>
     <Section id="proyectos">
-      <div class="flex justify-center">
-        <h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4">Proyectos</h2>
-      </div>
+      <h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"></h2>
       <Proyectos />
     </Section>
     <Section_services id="servicios">
-      <div class="flex justify-center">
-        <h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4">Mis Servicios</h2>
-      </div>
+      <h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"></h2>
       <Services />
     </Section_services>
     <Section_contact id="contacto">
-      <div class="flex flex-col justify-center ">
-        <h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center justify-center mb-4">Contacto</h2>
-        <Contact />
-      </div>
+      <h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center justify-center mb-4"></h2>
+      <Contact />
     </Section_contact>
     <Footer />
   </main>
