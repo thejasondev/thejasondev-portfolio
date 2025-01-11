@@ -3,7 +3,7 @@ export const personalInfo = {
   age: 27,
   location: "Miramar, La Habana, Cuba",
   description:
-    "Un apasionado desarrollador frontend con 27 años, residente en Miramar, La Habana, Cuba. Mi formación como ingeniero industrial me ha proporcionado una sólida base en la resolución de problemas.",
+    "Un apasionado desarrollador frontend con 27 años, residente en Miramar, La Habana, Cuba. Mi formación como Ingeniero Industrial me ha proporcionado una sólida base en la resolución de problemas.",
   offer:
     "Experiencias digitales modernas y funcionales, utilizando tecnologías como React, Tailwind CSS, y Astro, para crear soluciones a medida que superen tus expectativas.",
   whyChooseMe:
