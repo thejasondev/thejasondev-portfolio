@@ -4,6 +4,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  base: "/thejasondev-portfolio/",
+  base: process.env.NODE_ENV === "production" ? "/thejasondev-portfolio/" : "/",
   integrations: [tailwind()],
 });
