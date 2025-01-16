@@ -1,14 +1,14 @@
 {
-  "name": "thejasondev-portfolio",
+  "name": "curso-astro",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=development astro dev",
-    "start": "NODE_ENV=development astro dev",
-    "build": "NODE_ENV=production astro build",
+    "dev": "cross-env NODE_ENV=development astro dev",
+    "start": "cross-env NODE_ENV=development astro dev",
+    "build": "cross-env NODE_ENV=production astro build",
     "preview": "astro preview",
-    "deploy": "NODE_ENV=production astro build && gh-pages -d dist"
+    "deploy": "cross-env NODE_ENV=production astro build && gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -19,6 +19,7 @@
     "typescript": "^5.5.3"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "gh-pages": "^6.3.0",
     "prettier": "^3.4.2"
   }
