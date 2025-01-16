@@ -1,5 +1,5 @@
 # build output
-thejasondev-portfolio/
+dist/
 
 # generated types
 .astro/
