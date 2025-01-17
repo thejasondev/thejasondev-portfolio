@@ -15,11 +15,7 @@ import { personalInfo } from '../data/personalInfo.js';
 import Proyectos from './Proyectos.astro';
 import Contact from './Contact.astro';
 import Services from './Services.astro';
-
-const getImagePath = (path: string) => {
-  const basePath = import.meta.env.BASE_URL;
-  return path.startsWith('/') ? `${basePath}${path.slice(1)}` : `${basePath}${path}`;
-};
+import { getImagePath } from '../utils/paths';
 ---
 
 <Layout
