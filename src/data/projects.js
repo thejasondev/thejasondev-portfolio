@@ -38,7 +38,7 @@ export const PROJECTS = [
     description:
       "The Jason Store ofrece productos de calidad: tecnología, ropa, y más. Compra fácil y rápido online.",
     vercel: "https://the-jason-store.vercel.app/",
-    image: "/projects/proyecto1.webp",
+    image: "projects/proyecto1.webp",
     tags: [TAGS.Html, TAGS.Css, TAGS.Tailwind, TAGS.Js, TAGS.React],
   },
   {
@@ -46,7 +46,7 @@ export const PROJECTS = [
     description:
       "Pagina creada con el objetivo de usar API del clima y probar su funcionamiento. Se utilizo Html, Css y JS",
     vercel: "",
-    image: "/projects/proyecto2.webp",
+    image: "projects/proyecto2.webp",
     tags: [TAGS.Html, TAGS.Css, TAGS.Js],
   },
 ];

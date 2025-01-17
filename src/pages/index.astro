@@ -15,6 +15,11 @@ import { personalInfo } from '../data/personalInfo.js';
 import Proyectos from './Proyectos.astro';
 import Contact from './Contact.astro';
 import Services from './Services.astro';
+
+const getImagePath = (path: string) => {
+  const basePath = import.meta.env.BASE_URL;
+  return path.startsWith('/') ? `${basePath}${path.slice(1)}` : `${basePath}${path}`;
+};
 ---
 
 <Layout
@@ -25,7 +30,7 @@ import Services from './Services.astro';
     <Section id="top">
       <img
       class="rounded-full w-20 h-20 mb-4 lg:w-32 lg:h-32 lg:mb-6"
-      src={`${import.meta.env.BASE_URL}foto-perfil/profile_pic.png`}
+      src={getImagePath('foto-perfil/profile_pic.png')}
       alt={personalInfo.name}
 />
       <h1 class="flex flex-row gap-x-5 text-3xl md:text-4xl lg:text-3xl font-bold mb-6">

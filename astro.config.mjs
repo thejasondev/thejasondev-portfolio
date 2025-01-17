@@ -5,7 +5,12 @@ export default defineConfig({
   site: 'https://thejasondev.github.io',
   base: '/thejasondev-portfolio',
   build: {
-    assets: '_astro'
+    assets: '_assets'
   },
   integrations: [tailwind()],
+  vite: {
+    build: {
+      assetsInlineLimit: 0
+    }
+  }
 });

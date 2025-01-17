@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "create-nojekyll": "node -e \"try{require('fs').writeFileSync('.nojekyll','');}catch(e){}\"",
-    "deploy": "npm run create-nojekyll && npm run build && gh-pages -d dist"
+    "predeploy": "npm run create-nojekyll && npm run build",
+    "deploy": "gh-pages -d dist --dotfiles true"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
