@@ -11,6 +11,6 @@ export const personalInfo = {
   contact: {
     linkedin: "https://www.linkedin.com/in/thejasondev?",
     github: "https://github.com/thejasondev?",
-    email: "mailto:thejasondev13@gmail.com?",
+    email: "thejasondev13@gmail.com?",
   },
 };
