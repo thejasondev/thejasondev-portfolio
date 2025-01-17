@@ -10,7 +10,6 @@ export const personalInfo = {
     "Estoy comprometido con la calidad, la atención al detalle y el cumplimiento de plazos. Cada proyecto es una oportunidad para demostrar mi profesionalismo y dedicación.",
   contact: {
     linkedin: "https://www.linkedin.com/in/thejasondev?",
-    github: "https://github.com/thejasondev?",
     email: "thejasondev13@gmail.com?",
   },
 };

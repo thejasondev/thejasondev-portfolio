@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/common/Badge.astro';
 import Linkedin from '../icons/Social/Linkedin.astro';
-import Github from '../icons/Social/Github.astro';
 import Social_icons from '../components/common/Social_icons.astro';
 import Gmail from '../icons/Social/Gmail.astro';
 import Section from '../components/sections/Section.astro';
@@ -61,14 +60,10 @@ import { getImagePath } from '../utils/paths';
           </p>
         </div>
       </h2>
-      <nav class="flex gap-x-5 mt-6 flex-wrap">
+      <nav class="flex gap-x-5 mt-6 mb-2 flex-wrap">
         <Social_icons href={personalInfo.contact.linkedin} aria-label="Jason's LinkedIn profile">
           <Linkedin class="size-4 md:size-6" />
           LinkedIn
-        </Social_icons>
-        <Social_icons href={personalInfo.contact.github} aria-label="Jason's GitHub profile">
-          <Github class="size-4 md:size-6" />
-          GitHub
         </Social_icons>
         <Social_icons href={`mailto:${personalInfo.contact.email}`} aria-label="Send an email to Jason">
           <Gmail class="size-4 md:size-6" />
