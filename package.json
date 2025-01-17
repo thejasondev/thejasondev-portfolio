@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "touch .nojekyll && astro build && gh-pages -d dist -t true"
+    "create-nojekyll": "node -e \"try{require('fs').writeFileSync('.nojekyll','');}catch(e){}\"",
+    "deploy": "npm run create-nojekyll && astro build && gh-pages -d dist -t true"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
